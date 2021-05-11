@@ -1,0 +1,7 @@
+//Password Protect file
+<Files /var/www/html>
+AuthName "Prompt"
+AuthType Basic
+AuthUserFile /var/www/html/.htpasswd
+Require valid-user
+</Files>
