@@ -2,6 +2,7 @@ package mspr_java;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -40,7 +41,8 @@ public class Main {
 
         //RÃ©cup avec une liste existante
         //String[] listedesAgetns = {"Corrine Berthier" , "Sarah"};
-
+        //Trie par ordre alphabétique la liste des agents
+        Collections.sort(listedesAgents);
         AccueilToHTML accueilToHTML = new AccueilToHTML();
         String listedesagentsenHTML = accueilToHTML.render(listedesAgents.toArray(new String[listedesAgents.size()]));
 
