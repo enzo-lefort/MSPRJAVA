@@ -25,7 +25,7 @@ public class Main {
             // BufferedReader  fluxentree = new BufferedReader(new FileReader(args[0]));
             String ligne = null;
             while ((ligne = fluxentree.readLine()) != null) {
-                System.out.println(ligne);
+                //System.out.println(ligne);
                 listedesAgents.add(ligne);
             }
 
