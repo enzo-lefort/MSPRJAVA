@@ -13,6 +13,7 @@ public class AccueilToHTML {
         html.append( "<html lang='fr'>\n" );
 
         html.append( "<head>\n" );
+        html.append("<link rel=\"icon\" href=\"favicon.ico\" />");
         html.append( "<meta charset='utf-8'>\n" );
         html.append( "<title>Accueil Agent</title>\n" );
         html.append( "</head>\n\n" );
@@ -22,6 +23,7 @@ public class AccueilToHTML {
         html.append( "<ul>\n" );
         // Loop the list of reports passed as argument.
         for ( String agent : agents ) {
+            FicheAgent.agent(agent);
             try {
                 BufferedReader  fluxentree = new BufferedReader(new FileReader(agent + ".txt"));
                 // BufferedReader  fluxentree = new BufferedReader(new FileReader(args[0]));
@@ -41,7 +43,7 @@ public class AccueilToHTML {
 
             System.out.println(nomagent);
             System.out.println(prenomagent);
-            html.append("<li> <a href='"+agent+".txt'>" + prenomagent + " " +nomagent + "</a></li>\n" );
+            html.append("<li> <a href='"+agent+".html'>" + prenomagent + " " +nomagent + "</a></li>\n" );
             fluxentree.close();
             }
             catch (FileNotFoundException e) {
