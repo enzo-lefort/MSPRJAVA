@@ -15,11 +15,26 @@ public class AccueilToHTML {
         html.append( "<head>\n" );
         html.append("<link rel=\"icon\" href=\"favicon.ico\" />");
         html.append( "<meta charset='utf-8'>\n" );
-        html.append( "<title>Accueil Agent</title>\n" );
+        html.append( "<title>Accueil - Go Securi</title>\n" );
+        html.append("<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">\n");
+        html.append("<link href=\"https://fonts.googleapis.com/css2?family=Roboto&display=swap\" rel=\"stylesheet\"> \n");
+        html.append("<link href=\"agent.css\" rel=\"stylesheet\">\n");
         html.append( "</head>\n\n" );
         html.append( "<body>\n" );
-        html.append( "<p><font size=\"7\" face=\"Light, Calibri\" color=\"#379EC1\"><h1>Liste des agents</h1>\n</font></p>" );
-        // Make a list in HTML
+        
+        html.append("<div class=ligne>\n");
+        html.append("<div class=box>\n");
+        html.append( "<h1>Liste des agents</h1>\n" );
+        html.append("</div>\n");
+        
+        html.append("<div class=box>\n");
+        html.append("<img id='logo'  src='logo.jpg' />\n");
+        html.append("</div>\n");
+        
+        html.append("</div>\n");
+        
+        html.append("<div class=ligne>\n");
+        html.append("<div class=box>\n");
         html.append( "<ul>\n" );
         // Loop the list of reports passed as argument.
         for ( String agent : agents ) {
@@ -56,6 +71,8 @@ public class AccueilToHTML {
             // ajouter des href
         }
         html.append( "</ul>\n" );
+        html.append("</div>\n");
+        html.append("</div>\n");
         html.append( "</body>\n\n" );
 
         html.append( "</html>" );

@@ -85,39 +85,15 @@ public class FicheAgent {
         html.append("<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">\n");
         html.append("<link href=\"https://fonts.googleapis.com/css2?family=Roboto&display=swap\" rel=\"stylesheet\"> \n");
         html.append("</head>\n\n");
-
-        html.append("<style type=\"text/css\">\n");
-        html.append("html{\n");
-        html.append("font-family: Roboto;\n");
-        html.append("background: linear-gradient(to right, #000000, #659224, #379EC1, #000);\n");
-        html.append("}\n");
-        html.append("div.ligne{\n");
-        html.append("display: flex;\n");
-        html.append("align-items: flex-start;\n");
-        html.append("justify-content: space-between;\n");
-        html.append("height: 50%;\n");
-        html.append("}\n");
-        html.append("div.box :first-child{\n");
-        html.append("align-self: center;\n");
-        html.append("}\n");
-        html.append("img{\n");
-        html.append("width:250px;\n");
-        html.append("height: auto;\n");
-        html.append("border: 1px solid white;\n");
-        html.append("box-shadow;\n");
-        html.append("}\n");
-        html.append("h1{;\n");
-        html.append("color: #379EC1;\n");
-        html.append("}\n");
-        html.append("</style>\n");
+        html.append("<link href=\"agent.css\" rel=\"stylesheet\">\n");
         
         html.append("<body>\n");
         html.append("<div class=ligne>\n");
         html.append("<div class=box>\n");
-        html.append("<h1 class=identite>"+nom + " " + prenom +"</h1>\n");
+        html.append("<h1>"+nom + " " + prenom +"</h1> <br> <a class='menu' href='index.html'>Retour à l'accueil</a>\n");
         html.append("</div>\n");
         html.append("<div class=box>\n");
-        html.append("<h1></h1>\n");
+        html.append("<img id='logo'  src='logo.jpg' />\n");
         html.append("</div>\n");
         html.append("<div class=box>\n");
         html.append("<img src=\""+agent+".jpg\" />\n");
@@ -129,9 +105,9 @@ public class FicheAgent {
         html.append("<div class=box>\n");
         for(String i : liste_matos){
             if(matosAgent.contains(i.substring(0, i.indexOf("\t")))){
-                html.append("<input disabled type=\"checkbox\" id=\"scales\" name=\"scales\" checked><label for=\"scales\">"+i.substring(i.indexOf("\t"), i.length())+"</label><br />\n");
+                html.append("<input  type=\"checkbox\" id=\"scales\" name=\"scales\" checked><label for=\"scales\">"+i.substring(i.indexOf("\t"), i.length())+"</label><br />\n");
             }else{
-                html.append("<input disabled type=\"checkbox\" id=\"scales\" name=\"scales\"><label for=\"scales\">"+i.substring(i.indexOf("\t"), i.length())+"</label><br />\n");
+                html.append("<input  type=\"checkbox\" id=\"scales\" name=\"scales\"><label for=\"scales\">"+i.substring(i.indexOf("\t"), i.length())+"</label><br />\n");
             }
         }
         html.append("</div>\n");

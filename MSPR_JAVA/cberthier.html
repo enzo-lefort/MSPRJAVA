@@ -7,68 +7,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
 </head>
 
-<style type="text/css">
-html{
-font-family: Roboto;
-background: linear-gradient(to right, #000000, #659224, #379EC1, #000);
-}
-div.ligne{
-display: flex;
-align-items: flex-start;
-justify-content: space-between;
-height: 50%;
-}
-div.box :first-child{
-align-self: center;
-}
-img{
-width:250px;
-height: auto;
-border: 1px solid white;
-box-shadow;
-}
-h1{;
-color: #379EC1;
-}
-input[type="checkbox"] {
-    display: none;
-}
-
-label:before {
-    background: linear-gradient(to bottom, #fff 0px, #e6e6e6 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-    border: 1px solid #035f8f;
-    height: 36px;
-    width: 36px;
-    display: block;
-    cursor: pointer;
-}
-input[type="checkbox"] + label:before {
-    content: '';
-    background: linear-gradient(to bottom, #e6e6e6 0px, #fff 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-    border-color: #3d9000;
-    color: #96be0a;
-    font-size: 38px;
-    line-height: 35px;
-    text-align: center;
-}
-
-input[type="checkbox"]:disabled + label:before {
-    border-color: #eee;
-    color: #ccc;
-    background: linear-gradient(to top, #e6e6e6 0px, #fff 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-}
-
-input[type="checkbox"]:checked + label:before {
-    content: '✓';
-}
-</style>
+<link href="agent.css" rel="stylesheet">
 <body>
 <div class=ligne>
 <div class=box>
-<h1 class=identite>Berthier Corinne</h1>
+<h1>Berthier Corinne</h1> <br> <a class='menu' href='index.html'>Retour à l'accueil</a>
 </div>
 <div class=box>
-<h1></h1>
+<img id='logo'  src='logo.jpg' />
 </div>
 <div class=box>
 <img src="cberthier.jpg" />
@@ -78,16 +24,16 @@ input[type="checkbox"]:checked + label:before {
 <div class=box>
 </div>
 <div class=box>
-<input disabled type="checkbox" id="scales" name="scales"><label for="scales">	Mousqueton</label><br />
-<input disabled type="checkbox" id="scales" name="scales"><label for="scales">	Gants d’intervention</label><br />
-<input disabled type="checkbox" id="scales" name="scales"><label for="scales">	Brassard de sécurité</label><br />
-<input disabled type="checkbox" id="scales" name="scales"><label for="scales">	Porte menottes</label><br />
-<input disabled type="checkbox" id="scales" name="scales"><label for="scales">	Bandeau agent cynophile</label><br />
-<input disabled type="checkbox" id="scales" name="scales"><label for="scales">	Talkies walkies</label><br />
-<input disabled type="checkbox" id="scales" name="scales" checked><label for="scales">	Lampe Torche</label><br />
-<input disabled type="checkbox" id="scales" name="scales" checked><label for="scales">	Kit oreillette</label><br />
-<input disabled type="checkbox" id="scales" name="scales"><label for="scales">	Tasers</label><br />
-<input disabled type="checkbox" id="scales" name="scales" checked><label for="scales">	Bombes lacrymogènes</label><br />
+<input  type="checkbox" id="scales" name="scales"><label for="scales">	Mousqueton</label><br />
+<input  type="checkbox" id="scales" name="scales"><label for="scales">	Gants d’intervention</label><br />
+<input  type="checkbox" id="scales" name="scales"><label for="scales">	Brassard de sécurité</label><br />
+<input  type="checkbox" id="scales" name="scales"><label for="scales">	Porte menottes</label><br />
+<input  type="checkbox" id="scales" name="scales"><label for="scales">	Bandeau agent cynophile</label><br />
+<input  type="checkbox" id="scales" name="scales"><label for="scales">	Talkies walkies</label><br />
+<input  type="checkbox" id="scales" name="scales" checked><label for="scales">	Lampe Torche</label><br />
+<input  type="checkbox" id="scales" name="scales" checked><label for="scales">	Kit oreillette</label><br />
+<input  type="checkbox" id="scales" name="scales"><label for="scales">	Tasers</label><br />
+<input  type="checkbox" id="scales" name="scales" checked><label for="scales">	Bombes lacrymogènes</label><br />
 </div>
 <div class=box>
 </div>
