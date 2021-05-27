@@ -19,7 +19,7 @@ public class FicheAgent {
         List<String>matosAgent = new ArrayList();
         
         try {
-            agenthtml = new PrintWriter(new FileOutputStream(agent + ".html"));
+            agenthtml = new PrintWriter(new FileOutputStream("agents_html/"+agent + ".html"));
         }
         catch (FileNotFoundException e) {
             System.out.println("Erreur d'ouverture de "+agent+".html");
@@ -43,11 +43,11 @@ public class FicheAgent {
             System.out.println("Erreur de l'ouverture du fichier");
         }
         catch (IOException e) {
-            System.out.println("Erreur lecture"+agent+".txt");
+            System.out.println("Erreur lecture liste.txt");
         }
         
         try {
-            BufferedReader  fluxentree = new BufferedReader(new FileReader(agent + ".txt"));
+            BufferedReader  fluxentree = new BufferedReader(new FileReader("agents_txt/"+agent + ".txt"));
             // BufferedReader  fluxentree = new BufferedReader(new FileReader(args[0]));
             String ligne = null;
             int i = 0;
@@ -81,22 +81,20 @@ public class FicheAgent {
         html.append("<head>\n");
         html.append("<meta charset='utf-8'>\n");
         html.append("<title>"+nom+" "+prenom+"</title>\n");
-        html.append("<link rel=\"icon\" href=\"favicon.ico\" />");
-        html.append("<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">\n");
-        html.append("<link href=\"https://fonts.googleapis.com/css2?family=Roboto&display=swap\" rel=\"stylesheet\"> \n");
+        html.append("<link rel=\"icon\" href=\"..\\favicon.ico\" />");
         html.append("</head>\n\n");
-        html.append("<link href=\"agent.css\" rel=\"stylesheet\">\n");
+        html.append("<link href='..\\agent.css' rel=\"stylesheet\">\n");
         
         html.append("<body>\n");
         html.append("<div class=ligne>\n");
         html.append("<div class=box>\n");
-        html.append("<h1>"+nom + " " + prenom +"</h1> <br> <a class='menu' href='index.html'>Retour à l'accueil</a>\n");
+        html.append("<h1>"+nom + " " + prenom +"</h1> \n<br> \n ");
         html.append("</div>\n");
         html.append("<div class=box>\n");
-        html.append("<img id='logo'  src='logo.jpg' />\n");
+        html.append("<img id='logo'  src='..\\logo.jpg' />\n");
         html.append("</div>\n");
         html.append("<div class=box>\n");
-        html.append("<img src=\""+agent+".jpg\" />\n");
+        html.append("<img src=..\\agents_img/"+agent+".jpg />\n");
         html.append("</div>\n");
         html.append("</div>\n");
         html.append("<div class=ligne>\n");
@@ -114,6 +112,18 @@ public class FicheAgent {
         html.append("<div class=box>\n");
         html.append("</div>\n");
         html.append("</div>\n");
+        html.append("<div class=ligne>\n");
+        html.append("<div class=box>\n");
+        html.append("</div>\n");
+        html.append("<div class=box>\n");
+        html.append("</div>\n");
+        html.append("<div class=box>\n");
+        html.append("<form action='..\\index.html'>\n" 
+                +"<input type='submit' class='btn' value='Retour' /> \n" 
+                +"</form>\n");
+        html.append("</div>\n");
+        html.append("</div>\n");
+        
         html.append("</body>\n");
         html.append("</html>\n");
         agenthtml.print(html.toString());

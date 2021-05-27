@@ -16,8 +16,6 @@ public class AccueilToHTML {
         html.append("<link rel=\"icon\" href=\"favicon.ico\" />");
         html.append( "<meta charset='utf-8'>\n" );
         html.append( "<title>Accueil - Go Securi</title>\n" );
-        html.append("<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">\n");
-        html.append("<link href=\"https://fonts.googleapis.com/css2?family=Roboto&display=swap\" rel=\"stylesheet\"> \n");
         html.append("<link href=\"agent.css\" rel=\"stylesheet\">\n");
         html.append( "</head>\n\n" );
         html.append( "<body>\n" );
@@ -40,7 +38,7 @@ public class AccueilToHTML {
         for ( String agent : agents ) {
             FicheAgent.agent(agent);
             try {
-                BufferedReader  fluxentree = new BufferedReader(new FileReader(agent + ".txt"));
+                BufferedReader  fluxentree = new BufferedReader(new FileReader("agents_txt/"+agent + ".txt"));
                 // BufferedReader  fluxentree = new BufferedReader(new FileReader(args[0]));
                 String ligne = null;
                 int i=0;
@@ -58,14 +56,14 @@ public class AccueilToHTML {
 
             System.out.println(nomagent);
             System.out.println(prenomagent);
-            html.append("<li> <a href='"+agent+".html'>" + prenomagent + " " +nomagent + "</a></li>\n" );
+            html.append("<li> <a href='agents_html/"+agent+".html'>" + prenomagent + " " +nomagent + "</a></li>\n" );
             fluxentree.close();
             }
             catch (FileNotFoundException e) {
                 System.out.println("Erreur de l'ouverture du fichier");
             }
             catch (IOException e) {
-                System.out.println("Erreur lecture staff.txt");
+                System.out.println("Erreur lecture "+agent+".txt");
             }
             
             // ajouter des href
