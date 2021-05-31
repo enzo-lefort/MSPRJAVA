@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#Boucle pour récupérer les fichiers présent dans le dossier  
+for fich in `find ./MSPR_JAVA/agents_txt`
+do
+	#Si un fichier existe
+        if [ -f $fich ]
+        then
+		#récuperation du nom d'utilisateur
+		user=$(echo $fich | cut -d / -f 4 | cut -d . -f 1) 
+                #récupération du password
+		password=$(sed -n 4p $fich)
+		#ajout de l'utilisateur et du password au .htpasswd
+		printf "$user:$(openssl passwd -crypt $password)\n" >> .htpasswd
+        fi
+done
