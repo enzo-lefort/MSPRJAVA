@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cd /home/technique/MSPRJAVA/MSPR_JAVA
+git reset --hard
 git pull 
 echo "Génération du .jar"
 java -jar MSPR_JAVA.jar
