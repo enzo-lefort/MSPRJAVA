@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cd /home/technique/MSPRJAVA/MSPR_JAVA
+git pull 
 echo "Génération du .jar"
 java -jar MSPR_JAVA.jar
 echo "Copie du site vers /var/www/html"
